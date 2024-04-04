@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--all-bootstrap-style -->
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<style>
+ 
+		.center-container {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  height: 100vh;
+		}
+		 
+		.login-container {
+		 
+		  width: 700px;
+		  margin: auto;
+		  padding: 20px;
+		  border: 1px solid #ddd;
+		  border-radius: 5px;
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		 
+		.input-form {
+		  width: 640px;
+		  margin: auto;
+		  /* padding: 10px; */
+		  border: 1px solid #ddd;
+		  border-radius: 4px;
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		  color: #007bff;
+		  padding: 20px 50px;
+		
+		}
+		.login-form {
+		  width: 660px;
+		  margin: auto;
+		  padding: 10px;
+		  border: 1px solid #ddd;
+		  border-radius: 4px;
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		
+		}
+		 
+		.form-group {
+		  display: flex;
+		  flex-direction: column;
+		}
+		 
+		label {
+		  margin-bottom: 5px;
+		}
+		 
+		.btn {
+		  background-color: #007bff;
+		  color: #fff;
+		  padding: 20px 30px;
+		  border: none;
+		  border-radius: 3px;
+		  cursor: pointer;
+		  margin: 10px 250px;
+		}
+		 
+		.btn:hover {
+		  background-color: #0056b3;
+		}
+		 
+		label {
+		  margin-bottom: 5px;
+		  font-weight: normal; /* Make the label text bold */
+		}
+		 
+		h1 {
+		  color: #007bff; /* Change the color of the heading text */
+		  text-align: center; /* Center the heading text */
+		}
+	</style>
+ 
+</head>
+<body>
+<div class="center-container">
+  <div class="login-container">
+    <h1>PRODUCT EXCEL FILE UPLOAD:-</h1>
+	<form method="POST" class="login-form" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div>
+			<input type="file" class="input-form" name="excel_file"><br><br>
+			<button type="submit" class="btn btn-primary">Upload</button>
+		</div>
+	</form>  
+    </form>
+  </div>
+</div>
+</body>
+</html>
